@@ -1,4 +1,4 @@
-(function() {
+(function () {
   let info = document.querySelectorAll(".moduleoutput tbody")[0];
   let nodes = document.querySelectorAll(".moduleoutput tbody")[1];
   function get(tbody, row, col) {
@@ -13,8 +13,9 @@
     return {
       remarks: tds[1].innerText,
       server: tds[3].innerText,
+      method: tds[2].innerText,
       server_port,
-      password
+      password,
     };
   });
   console.log(JSON.stringify(servers));
